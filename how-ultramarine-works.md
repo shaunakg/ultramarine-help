@@ -25,5 +25,5 @@ The step numbers here correlate with the steps above in *Typical usage*. Note th
 ## What *isn't* encrypted
 There is some message metadata visible to the server that is required for the operation of the service and routing of the messages. Currently, the unencrypted metadata is:
 
-- The username: username's usually don't contain private information and since we don't have an accounts system, there isn't much use encrypting this.
+- The username: usernames usually don't contain private information and since we don't have an accounts system, there isn't much use encrypting this.
 - The message ID: random and therefore has no use if encrypted.
