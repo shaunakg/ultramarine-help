@@ -21,3 +21,9 @@ The step numbers here correlate with the steps above in *Typical usage*. Note th
 4. When you recieve a messsage, your client attempts to decrypt it with the password that you have supplied.
     - The message includes both a flag and the content of the message itself. The flag is known to both clients, and if the decrypted flag doesn't match up with what the client already knows, then the decryption password is wrong. In this case, you will see a `<unable to decrypt>` message.
     - If the flags match, then the content is decrypted and shown to you. We also use [Statically](https://statically.io/) to render a profile picture based off your username.
+
+## What *isn't* encrypted
+There is some message metadata visible to the server that is required for the operation of the service and routing of the messages. Currently, the unencrypted metadata is:
+
+- The username: username's usually don't contain private information and since we don't have an accounts system, there isn't much use encrypting this.
+- The message ID: random and therefore has no use if encrypted.
